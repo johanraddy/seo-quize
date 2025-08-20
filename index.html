@@ -35,156 +35,94 @@
       font-size: 16px;
       cursor: pointer;
     }
+    .feedback {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .correct {
+      color: green;
+    }
+    .wrong {
+      color: red;
+    }
   </style>
 </head>
 <body>
   <h1>SEO Basics Quiz</h1>
   <form id="quizForm">
-    <!-- Questions Start -->
-    <div class="question">
-      <h3>1. What does SEO stand for?</h3>
-      <label><input type="radio" name="q1" value="a"> Search Engine Optimization</label><br>
-      <label><input type="radio" name="q1" value="b"> Search Email Optimization</label><br>
-      <label><input type="radio" name="q1" value="c"> Social Engine Optimization</label>
-    </div>
+    
+    <!-- Questions -->
+    <div id="questionsContainer"></div>
 
-    <div class="question">
-      <h3>2. What is a keyword?</h3>
-      <label><input type="radio" name="q2" value="a"> A type of password</label><br>
-      <label><input type="radio" name="q2" value="b"> A word or phrase people search for in search engines</label><br>
-      <label><input type="radio" name="q2" value="c"> A backlink source</label>
-    </div>
-
-    <div class="question">
-      <h3>3. What does a title tag do?</h3>
-      <label><input type="radio" name="q3" value="a"> Describes the page content to search engines</label><br>
-      <label><input type="radio" name="q3" value="b"> Changes the website background</label><br>
-      <label><input type="radio" name="q3" value="c"> Adds an image to your site</label>
-    </div>
-
-    <div class="question">
-      <h3>4. What is a backlink?</h3>
-      <label><input type="radio" name="q4" value="a"> A link from another website to your website</label><br>
-      <label><input type="radio" name="q4" value="b"> A button on your site</label><br>
-      <label><input type="radio" name="q4" value="c"> A paid advertisement</label>
-    </div>
-
-    <div class="question">
-      <h3>5. What is anchor text?</h3>
-      <label><input type="radio" name="q5" value="a"> Text used in advertisements</label><br>
-      <label><input type="radio" name="q5" value="b"> The visible text of a hyperlink</label><br>
-      <label><input type="radio" name="q5" value="c"> HTML tag for headings</label>
-    </div>
-
-    <div class="question">
-      <h3>6. What is meta description?</h3>
-      <label><input type="radio" name="q6" value="a"> Description of your site shown in search results</label><br>
-      <label><input type="radio" name="q6" value="b"> Image caption</label><br>
-      <label><input type="radio" name="q6" value="c"> Blog post title</label>
-    </div>
-
-    <div class="question">
-      <h3>7. What is Google Search Console used for?</h3>
-      <label><input type="radio" name="q7" value="a"> Social media management</label><br>
-      <label><input type="radio" name="q7" value="b"> Monitoring your site’s presence in Google search results</label><br>
-      <label><input type="radio" name="q7" value="c"> Editing images</label>
-    </div>
-
-    <div class="question">
-      <h3>8. What’s an XML sitemap?</h3>
-      <label><input type="radio" name="q8" value="a"> A map of your home address</label><br>
-      <label><input type="radio" name="q8" value="b"> A file that lists pages of a website for search engines</label><br>
-      <label><input type="radio" name="q8" value="c"> A type of blog post</label>
-    </div>
-
-    <div class="question">
-      <h3>9. What is considered “black hat” SEO?</h3>
-      <label><input type="radio" name="q9" value="a"> Paid ads</label><br>
-      <label><input type="radio" name="q9" value="b"> Spammy or manipulative SEO tactics</label><br>
-      <label><input type="radio" name="q9" value="c"> Writing content for users</label>
-    </div>
-
-    <div class="question">
-      <h3>10. What is the ideal length for a meta description?</h3>
-      <label><input type="radio" name="q10" value="a"> 100–160 characters</label><br>
-      <label><input type="radio" name="q10" value="b"> 500 characters</label><br>
-      <label><input type="radio" name="q10" value="c"> Any length is fine</label>
-    </div>
-
-    <!-- 10 More Questions -->
-
-    <div class="question">
-      <h3>11. What’s a 404 error?</h3>
-      <label><input type="radio" name="q11" value="a"> Server error</label><br>
-      <label><input type="radio" name="q11" value="b"> Page not found</label><br>
-      <label><input type="radio" name="q11" value="c"> Redirect</label>
-    </div>
-
-    <div class="question">
-      <h3>12. What’s a robots.txt file?</h3>
-      <label><input type="radio" name="q12" value="a"> Blocks or allows search engine crawling</label><br>
-      <label><input type="radio" name="q12" value="b"> Image filter</label><br>
-      <label><input type="radio" name="q12" value="c"> User login file</label>
-    </div>
-
-    <div class="question">
-      <h3>13. What is domain authority?</h3>
-      <label><input type="radio" name="q13" value="a"> Your site's age</label><br>
-      <label><input type="radio" name="q13" value="b"> A score predicting how well a site will rank</label><br>
-      <label><input type="radio" name="q13" value="c"> Site security level</label>
-    </div>
-
-    <div class="question">
-      <h3>14. Which tool helps analyze SEO performance?</h3>
-      <label><input type="radio" name="q14" value="a"> Canva</label><br>
-      <label><input type="radio" name="q14" value="b"> Google Analytics</label><br>
-      <label><input type="radio" name="q14" value="c"> Zoom</label>
-    </div>
-
-    <div class="question">
-      <h3>15. What is a long-tail keyword?</h3>
-      <label><input type="radio" name="q15" value="a"> A short keyword</label><br>
-      <label><input type="radio" name="q15" value="b"> A very specific search phrase</label><br>
-      <label><input type="radio" name="q15" value="c"> A misspelled keyword</label>
-    </div>
-
-    <div class="question">
-      <h3>16. Which is more SEO-friendly?</h3>
-      <label><input type="radio" name="q16" value="a"> www.example.com/page?id=123</label><br>
-      <label><input type="radio" name="q16" value="b"> www.example.com/seo-guide</label><br>
-      <label><input type="radio" name="q16" value="c"> www.example.com/page123</label>
-    </div>
-
-    <div class="question">
-      <h3>17. What is “on-page SEO”?</h3>
-      <label><input type="radio" name="q17" value="a"> SEO done through social media</label><br>
-      <label><input type="radio" name="q17" value="b"> Optimizing individual pages on your website</label><br>
-      <label><input type="radio" name="q17" value="c"> Buying ads</label>
-    </div>
-
-    <div class="question">
-      <h3>18. What’s the benefit of mobile optimization?</h3>
-      <label><input type="radio" name="q18" value="a"> Slower loading</label><br>
-      <label><input type="radio" name="q18" value="b"> Better experience and rankings on mobile</label><br>
-      <label><input type="radio" name="q18" value="c"> Increases bounce rate</label>
-    </div>
-
-    <div class="question">
-      <h3>19. What does "bounce rate" measure?</h3>
-      <label><input type="radio" name="q19" value="a"> Number of backlinks</label><br>
-      <label><input type="radio" name="q19" value="b"> Time spent on your site</label><br>
-      <label><input type="radio" name="q19" value="c"> Percentage of visitors who leave quickly</label>
-    </div>
-
-    <div class="question">
-      <h3>20. What is a canonical URL?</h3>
-      <label><input type="radio" name="q20" value="a"> Duplicate URL</label><br>
-      <label><input type="radio" name="q20" value="b"> Preferred version of a web page</label><br>
-      <label><input type="radio" name="q20" value="c"> URL that redirects</label>
-    </div>
-
-    <!-- Submit Button -->
     <input type="submit" value="Submit Quiz">
   </form>
+
+  <script>
+    const questions = [
+      { q: "What does SEO stand for?", options: ["Search Engine Optimization", "Search Email Optimization", "Social Engine Optimization"], answer: "a" },
+      { q: "What is a keyword?", options: ["A type of password", "A word or phrase people search for in search engines", "A backlink source"], answer: "b" },
+      { q: "What does a title tag do?", options: ["Describes the page content to search engines", "Changes the website background", "Adds an image to your site"], answer: "a" },
+      { q: "What is a backlink?", options: ["A link from another website to your website", "A button on your site", "A paid advertisement"], answer: "a" },
+      { q: "What is anchor text?", options: ["Text used in advertisements", "The visible text of a hyperlink", "HTML tag for headings"], answer: "b" },
+      { q: "What is meta description?", options: ["Description of your site shown in search results", "Image caption", "Blog post title"], answer: "a" },
+      { q: "What is Google Search Console used for?", options: ["Social media management", "Monitoring your site’s presence in Google search results", "Editing images"], answer: "b" },
+      { q: "What’s an XML sitemap?", options: ["A map of your home address", "A file that lists pages of a website for search engines", "A type of blog post"], answer: "b" },
+      { q: "What is considered “black hat” SEO?", options: ["Paid ads", "Spammy or manipulative SEO tactics", "Writing content for users"], answer: "b" },
+      { q: "What is the ideal length for a meta description?", options: ["100–160 characters", "500 characters", "Any length is fine"], answer: "a" },
+      { q: "What’s a 404 error?", options: ["Server error", "Page not found", "Redirect"], answer: "b" },
+      { q: "What’s a robots.txt file?", options: ["Blocks or allows search engine crawling", "Image filter", "User login file"], answer: "a" },
+      { q: "What is domain authority?", options: ["Your site's age", "A score predicting how well a site will rank", "Site security level"], answer: "b" },
+      { q: "Which tool helps analyze SEO performance?", options: ["Canva", "Google Analytics", "Zoom"], answer: "b" },
+      { q: "What is a long-tail keyword?", options: ["A short keyword", "A very specific search phrase", "A misspelled keyword"], answer: "b" },
+      { q: "Which is more SEO-friendly?", options: ["www.example.com/page?id=123", "www.example.com/seo-guide", "www.example.com/page123"], answer: "b" },
+      { q: "What is “on-page SEO”?", options: ["SEO done through social media", "Optimizing individual pages on your website", "Buying ads"], answer: "b" },
+      { q: "What’s the benefit of mobile optimization?", options: ["Slower loading", "Better experience and rankings on mobile", "Increases bounce rate"], answer: "b" },
+      { q: "What does 'bounce rate' measure?", options: ["Number of backlinks", "Time spent on your site", "Percentage of visitors who leave quickly"], answer: "c" },
+      { q: "What is a canonical URL?", options: ["Duplicate URL", "Preferred version of a web page", "URL that redirects"], answer: "b" },
+    ];
+
+    const container = document.getElementById("questionsContainer");
+
+    // Generate all 20 questions dynamically
+    questions.forEach((item, index) => {
+      const qNum = index + 1;
+      const div = document.createElement("div");
+      div.className = "question";
+      div.innerHTML = `
+        <h3>${qNum}. ${item.q}</h3>
+        <label><input type="radio" name="q${qNum}" value="a"> ${item.options[0]}</label><br>
+        <label><input type="radio" name="q${qNum}" value="b"> ${item.options[1]}</label><br>
+        <label><input type="radio" name="q${qNum}" value="c"> ${item.options[2]}</label>
+        <div class="feedback" id="feedback${qNum}"></div>
+      `;
+      container.appendChild(div);
+    });
+
+    document.getElementById("quizForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let score = 0;
+
+      questions.forEach((item, index) => {
+        const qNum = index + 1;
+        const selected = document.querySelector(`input[name="q${qNum}"]:checked`);
+        const feedback = document.getElementById(`feedback${qNum}`);
+
+        if (!selected) {
+          feedback.textContent = "Please select an answer.";
+          feedback.className = "feedback wrong";
+        } else if (selected.value === item.answer) {
+          feedback.textContent = "Correct ✅";
+          feedback.className = "feedback correct";
+          score++;
+        } else {
+          feedback.textContent = "Wrong ❌";
+          feedback.className = "feedback wrong";
+        }
+      });
+
+      alert("Your score is: " + score + "/" + questions.length);
+    });
+  </script>
 </body>
 </html>
